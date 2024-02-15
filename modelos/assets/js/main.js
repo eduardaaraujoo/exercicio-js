@@ -10,3 +10,10 @@ function setResultado (msg) {
     const resultado = document.querySelector('#resultado');
     resultado.innerHTML = msg;
 }
+
+
+
+
+
+
+
