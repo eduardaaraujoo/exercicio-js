@@ -17,6 +17,7 @@ while(rand !== 10){
 }
 
 console.log('############')
+
 //DO WHILE
 
 do {
