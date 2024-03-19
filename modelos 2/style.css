@@ -64,6 +64,10 @@ form button:hover {
     padding: 10px 20px;
 }
 
-.watch {
+.clock {
     font-size: 3em;
+}
+
+.paused {
+    color: red;
 }
