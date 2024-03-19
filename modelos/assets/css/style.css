@@ -59,7 +59,7 @@ form button:hover {
     background: var(--primary-color-darker);
 }
 
-.imc, .resultado {
-    display: flex;
-   
+.paragrafo-resultado {
+    background: rgb(109, 255, 182);
+    padding: 10px 20px;
 }
