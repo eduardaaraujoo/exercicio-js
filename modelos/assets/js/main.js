@@ -12,6 +12,13 @@ function criaP (className) {
 
 function setResultado (msg) {
     const resultado = document.querySelector('#resultado');
+
     resultado.innerHTML = ''; 
     const p = criaP()
+}{
+
+    resultado.innerHTML = msg;
 }
+
+
+
