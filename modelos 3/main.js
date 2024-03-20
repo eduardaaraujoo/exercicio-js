@@ -38,6 +38,7 @@ function createTask(textInput){
     task.appendChild(li);
     clearInput();
     createDeleteButton(li);
+    saveTasks();
 }
 
 btnTask.addEventListener('click', function(){
@@ -47,8 +48,12 @@ btnTask.addEventListener('click', function(){
 
 document.addEventListener('click', function(e) {
     const el = e.target;
-
     if (el.classList.contains('delete')){
         el.parentElement.remove();
     }
-})
+});
+
+function saveTasks(){
+    const liTasks = tarefas.querySelectorAll('li');
+    console.log(liTasks)
+}
