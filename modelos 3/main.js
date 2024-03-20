@@ -16,6 +16,16 @@ inputTask.addEventListener('keypress', function(e) {
     }
 });
 
+
+//função para criar botão para apagar as tarefas
+function createDeleteButton (li){
+    li.innerText += ' ';
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
+    deleteButton.setAttribute('class', 'delete');
+    li.appendChild(deleteButton);
+}
+
 //o input for limpar toda vez que adicionar uma nova tarefa 
 function clearInput() {
     inputTask.value = '';
@@ -26,7 +36,8 @@ function createTask(textInput){
     const li = createLi();
     li.innerText = textInput;
     task.appendChild(li);
-    clearInput()
+    clearInput();
+    createDeleteButton(li);
 }
 
 btnTask.addEventListener('click', function(){
@@ -34,3 +45,10 @@ btnTask.addEventListener('click', function(){
     createTask(inputTask.value);    //criou uma função para criar nova tarefa 
 });
 
+document.addEventListener('click', function(e) {
+    const el = e.target;
+
+    if (el.classList.contains('delete')){
+        el.parentElement.remove();
+    }
+})

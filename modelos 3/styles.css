@@ -59,15 +59,5 @@ form button:hover {
     background: var(--primary-color-darker);
 }
 
-.paragrafo-resultado {
-    background: rgb(109, 255, 182);
-    padding: 10px 20px;
-}
 
-.clock {
-    font-size: 3em;
-}
 
-.paused {
-    color: red;
-}
