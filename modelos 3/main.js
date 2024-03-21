@@ -54,6 +54,17 @@ document.addEventListener('click', function(e) {
 });
 
 function saveTasks(){
-    const liTasks = tarefas.querySelectorAll('li');
-    console.log(liTasks)
+    const liTasks = task.querySelectorAll('li');
+    const toDoList = [];
+
+    for (let tasks of liTasks){
+        let taskText = tasks.innerHTML;
+        taskText = taskText.replace('Delete', '').trim();
+        toDoList.push(taskText);
+    }
+
+    const tasksJSON = JSON.stringify(toDoList);
+    localStorage.setItem('task', tasksJSON);
+
+    //LocalStorage é como se fosse um mini banco de dados no navegador.
 }
