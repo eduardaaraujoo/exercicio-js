@@ -50,6 +50,7 @@ document.addEventListener('click', function(e) {
     const el = e.target;
     if (el.classList.contains('delete')){
         el.parentElement.remove();
+        saveTasks();
     }
 });
 
@@ -57,14 +58,21 @@ function saveTasks(){
     const liTasks = task.querySelectorAll('li');
     const toDoList = [];
 
-    for (let tasks of liTasks){
-        let taskText = tasks.innerHTML;
-        taskText = taskText.replace('Delete', '').trim();
+    for (let task of liTasks){
+        let taskText = task.innerText.trim(); // Obtenha o texto da tarefa, removendo espaços em branco adicionais
         toDoList.push(taskText);
     }
 
     const tasksJSON = JSON.stringify(toDoList);
     localStorage.setItem('task', tasksJSON);
-
-    //LocalStorage é como se fosse um mini banco de dados no navegador.
 }
+
+function addSaveTasks(){
+    const saveTask = localStorage.getItem('task');
+    const toDoList = JSON.parse(task);
+    
+    for(let tasks of toDoList){
+        createTask(tasks);
+    }
+}
+addSaveTasks();
