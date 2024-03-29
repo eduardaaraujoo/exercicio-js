@@ -7,6 +7,6 @@ const frutas = ['Maçã', 'Laranja', 'Manga'];
    // }
 
    for (let i in frutas) {
-    console.log(i);
+    console.log(frutas [i]);
    }
 
