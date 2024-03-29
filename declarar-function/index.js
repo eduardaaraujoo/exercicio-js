@@ -10,3 +10,9 @@ falaOi();
     console.log('Joguei o dado');
  };
  jogaDado();
+
+ //Arrow function
+  const funcaoArrow = () => {
+    console.log('Aqui está a arrow function');
+  }
+  funcaoArrow();
