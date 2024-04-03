@@ -23,3 +23,4 @@ falaOi();
     }
   };
   obj.falar();
+  
