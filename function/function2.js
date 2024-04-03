@@ -18,4 +18,4 @@ const quadriplica = criaMultiplicador(4);
 
 console.log(duplica(3));
 console.log(triplica(2));
-console.log(quadriplica(10))
+console.log(quadriplica(10));
