@@ -1,10 +1,11 @@
 function criaCalculadora() {
     return{
 
-        display: document.querySelector('.display')
+        display: document.querySelector('.display'),
 
         inicia() {
-            alert('Oi, iniciei');
+            this.cliqueBotoes();
+            //THIS -> é a calculadora
         },
 
         cliqueBotoes() {
@@ -12,13 +13,14 @@ function criaCalculadora() {
                 const el = e.target;
 
                 if(el.classList.contains('btn-num')) {
-                    this.btnParaDisplay();
+                    this.btnParaDisplay(el.innerText);
                 }
-            });
+            }.bind(this));
         },
 
-
-
+        btnParaDisplay(valor){
+            this.display;
+        }
 
     };
 }
