@@ -1,28 +1,32 @@
 function criaCalculadora() {
-    return{
+    return {
 
         display: document.querySelector('.display'),
 
+        clearDisplay(){
+            this.display.value = '';
+        },
+
         inicia() {
-            this.cliqueBotoes();
-            //THIS -> é a calculadora
+            this.cliqueBotoes(); //THIS -> é a calculadora
         },
 
         cliqueBotoes() {
-            document.addEventListener('click', function(e){
-                const el = e.target;
+            document.addEventListener('click', (e) => {
+                const el = e.target; 
 
                 if(el.classList.contains('btn-num')) {
                     this.btnParaDisplay(el.innerText);
                 }
-            }.bind(this));
+            });
         },
 
         btnParaDisplay(valor){
-            this.display;
+            this.display.innerText = valor;
         }
 
     };
+    return calculadora;
 }
 
 const calculadora = criaCalculadora();
