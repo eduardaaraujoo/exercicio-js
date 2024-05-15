@@ -26,3 +26,7 @@ Conta.prototype.verSaldo = function() {
 
     );         //ag = agencia e c = conta
 };
+
+
+const conta1 = new Conta(11, 25, 13);
+conta1.depositar(40);
