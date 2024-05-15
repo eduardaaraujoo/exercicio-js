@@ -20,13 +20,13 @@ validarCPF.prototype.criaDigito = function(cpfParcial){
     const cpfArray = Array.from(cpfParcial);
     
     let regressivo = cpfArray.length + 1;
-    const digito = cpfArray.reduce((ac, val) => {
+    const digito = cpfArray.reduce((ac, val) => {  //ac = acumulador
+        console.log(regressivo, typeof val, regressivo * val);
+        ac += (ac * val);
         regressivo--;
-        console.log(regressivo);
         return ac;
     }, 0);
 }
-
 
 
 const cpf = new validarCPF('089.985.844-92');
