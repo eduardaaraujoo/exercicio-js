@@ -39,7 +39,7 @@ validarCPF.prototype.isSequencia = function(){
     return sequencia === this.cpfLimpo;
 }
 
-const cpf = new validarCPF('089.985.844-92');
+const cpf = new validarCPF('089.985.844-82');
 
 if(cpf.valida()){
     console.log('Cpf válido')
