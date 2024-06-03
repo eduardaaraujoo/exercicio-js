@@ -16,3 +16,11 @@ falaOi();
     console.log('Aqui está a arrow function');
   }
   funcaoArrow();
+
+  const obj = {
+    falar(){
+      console.log('I am a developer');
+    }
+  };
+  obj.falar();
+  
